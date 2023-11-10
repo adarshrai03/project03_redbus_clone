@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <title>redbus clone</title>
+</head>
+
+<style>
+    .feature {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .portion {
+        background-image: url('https://s1.rdbuz.com/web/images/homeV2/appinstall/appInstallbg.svg');
+    }
+
+    .campanies-name{
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Nunito', sans-serif;
+        color: rgb(94, 94, 94);
+    }
+    .campanies-name:hover{
+        color: black;
+    }
+
+    .request{
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Nunito', sans-serif;
+        color: gray;
+    }
+
+    .about{
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Nunito', sans-serif;
+    }
+</style>
+
+
+
+<body>
+    <div class="navbar flex items-center w-screen h-fit bg-white shadow-lg shadow black sticky top-0 z-10">
+
+        <!-- bus logo -->
+        <img class="logo mt-6 ml-28 p-2 cursor-pointer" src="https://st.redbus.in/Images/rdc/rdc-redbus-logo.svg"
+            alt="bus-logo">
+
+        <!-- middle item -->
+        <ul class="h-fit ml-28 flex gap-x-8">
+            <li
+                class=" flex flex-col justify-center p-2 grayscale transition duration-500 hover:filter-none hover:bg-neutral-200 rounded cursor-pointer">
+                <img class="h-10 w-10 ml-4  " src="https://st.redbus.in/web/images/layout/rb_vertical.svg" alt="">
+                <span>Bus Tickets</span>
+            </li>
+            <li
+                class=" flex flex-col justify-center p-2 grayscale transition duration-500 hover:bg-neutral-200 rounded cursor-pointer">
+                <img class="h-10 w-10 ml-5" src="https://st.redbus.in/web/images/layout/ryde_vertical.svg" alt="">
+                <span>Cab Rental</span>
+            </li>
+            <li
+                class=" flex flex-col justify-center p-2 grayscale transition duration-500 hover:filter-none hover:bg-neutral-200 rounded cursor-pointer">
+                <img class="h-10 w-10 ml-5" src="https://st.redbus.in/web/images/layout/rail_vertical.svg" alt="">
+                <span>Train Tickets</span>
+            </li>
+        </ul>
+
+        <!-- left item of navbar -->
+
+        <ul class="ml-96 flex gap-x-8">
+            <li
+                class="p-3 flex flex justify-center items-center gap-x-1 hover:bg-red-100 rounded cursor-pointer transition duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-8 h-6 hover:fill-black">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                <span>Help</span>
+            </li>
+            <li
+                class="p-3 flex justify-center items-center gap-x-1 hover:bg-neutral-200 rounded cursor-pointer transition duration-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-8 h-6 hover:fill-black">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+                <span>Account</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Search portion -->
+
+    <div class="hero h-fit w-fit flex flex-col items-center relative">
+        <img src="https://st.redbus.in/Images/HomeIndia/HeroImage.png" alt="">
+        <h1 class="absolute text-amber-100 mt-16 text-4xl font-bold">India's No. 1 Online Bus Ticket Booking Site</h1>
+
+        <div
+            class="search-bar absolute top-40 ml-32 p-1 rounded-3xl h-fit w-fit rounded flex bg-white gap-x-12 divide-x-[1.5px] divide-neutral-400">
+            <!-- from -->
+            <div class="flex p-7">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z" />
+                </svg>
+                <input class="text-center p-1 hover:bg-neutral-200 rounded" type="text" placeholder="From">
+            </div>
+
+            <!-- To -->
+            <div class="flex p-7">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z" />
+                </svg>
+                <input class="text-center p-1 hover:bg-neutral-200 rounded" type="text" placeholder="To">
+            </div>
+
+            <!-- Date -->
+            <div class="flex p-7 gap-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                </svg>
+                <input type="date" class="text-center text-center p-1 rounded hover:bg-neutral-200 rounded" type="text"
+                    placeholder="Date">
+            </div>
+
+            <!-- Search button -->
+            <div class="flex pl-2 ">
+                <Button
+                    class="text-center bg-red-500 text-white font-bold p-8 rounded-tr-3xl rounded-br-3xl hover:bg-red-700 transition duration-500">SEARCH
+                    BUSES</Button>
+            </div>
+
+        </div>
+
+
+        <!-- offer portion -->
+
+        <div class="offers h-fit w-9/12 rounded-3xl bg-white shadow-lg shadow black overflow-auto absolute top-96">
+            <h1 class="text-neutral-500 text-3xl mt-6 ml-10 ">TRENDING OFFERS</h1>
+            <button
+                class="p-3 absolute right-10 top-5 bg-neutral-100 rounded-3xl shadow-sm shadow-black hover:bg-red-200 transition duration-500">View
+                All</button>
+
+
+            <div class="cards flex gap-x-4 w-full ml-10 mr-10 mb-8">
+
+                <!-- offer card 1 -->
+                <div
+                    class="offer-card1 flex items-center w-80 mt-8 h-fit text-white rounded-3xl bg-gradient-to-r from-blue-500 to-cyan-500">
+
+                    <div class="image w-1/3 h-full p-3 mb-8">
+                        <img class=" rounded-full"
+                            src="https://st.redbus.in/images/FIRST/first_26th_sep_2022_ravi/tile-80X80.png" alt="">
+                    </div>
+
+                    <div class="text p-3 mt-4 ">
+                        <p class="text-xl font-bold">Save up to Rs 250 on bus tickets
+                        <p class="mb-3">Valid till 9 Nov</p>
+                        <button class=" pr-3 pl-3 border-2 border-dashed bg-transparent rounded-xl">FIRST</button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- offer card 2 -->
+
+                <div
+                    class="offer-card2 flex items-center w-80 mt-8 h-fit text-white rounded-3xl bg-gradient-to-r from-red-950 to-red-600">
+
+                    <div class="image w-1/3 h-full p-3 mb-8">
+                        <img class=" rounded-full" src="https://st.redbus.in/Images/INDOFFER/80x80/SUPERHIT.png" alt="">
+                    </div>
+
+                    <div class="text p-3 mt-4 ">
+                        <p class="text-xl font-bold">Save up to Rs 300 on AP, TS routes
+                        <p class="mb-3">Valid till 30 Nov</p>
+                        <button class=" pr-3 pl-3 border-2 border-dashed bg-transparent rounded-xl">SUPERHIT</button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Offer card 3 -->
+
+                <div
+                    class="offer-card3 flex items-center w-80 mt-8 h-fit text-white rounded-3xl bg-gradient-to-r from-green-800 to-green-500">
+
+                    <div class="image w-1/3 h-full p-3 mb-8">
+                        <img class=" rounded-full" src="	https://st.redbus.in/Images/INDOFFER/80x80/BUS300.png" alt="">
+                    </div>
+
+                    <div class="text p-3 mt-4 ">
+                        <p class="text-xl font-bold">Save up to Rs 300 on RJ,MH, Goa, MP,
+                        <p class="mb-3">Valid till 30 Nov</p>
+                        <button class=" pr-3 pl-3 border-2 border-dashed bg-transparent rounded-xl">BUS300</button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Offer card 4 -->
+
+                <div
+                    class="offer-card3 flex items-center w-80 mt-8 h-fit text-white rounded-3xl bg-gradient-to-r from-yellow-800 to-yellow-500">
+
+                    <div class="image w-1/3 h-full p-3 mb-8">
+                        <img class=" rounded-full" src="https://st.redbus.in/Images/INDOFFER/80x80/RBTRIP.png" alt="">
+                    </div>
+
+                    <div class="text p-3 mt-4 ">
+                        <p class="text-xl font-bold">Save up to Rs 200 in Kerala routes.
+                        <p class="mb-3">Valid till 30 Nov</p>
+                        <button class=" pr-3 pl-3 border-2 border-dashed bg-transparent rounded-xl">RBTRIP</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partial portion -->
+
+        <div class="partial h-fit w-full mt-48 flex justify-center">
+            <div class="partial-content h-fit w-9/12 flex">
+                <div class="text width h-fit w-1/2">
+
+                    <!-- heading -->
+                    <h2 class=" text-5xl font-family: Montserrat;">
+                        NOW ,<b class="text-5xl">GET MORE THAN JUST BUS</b> TICKETS WITH REDBUS!
+                    </h2>
+
+                    <!-- upper button -->
+                    <div class="upper-button w-fit mt-8 flex border-b border-neutral-400">
+
+                        <ul class="flex w-full gap-x-4">
+
+                            <!-- bus rental button -->
+                            <li
+                                class="flex items-center gap-x-4 transition duration-500 grayscale hover:filter-none hover:text-red-600 hover:bg-neutral-200 rounded-t-xl box-border border-b-4 border-transparent hover:border-red-600">
+                                <img class="h-14 w-14 " src="https://st.redbus.in/web/images/layout/ryde_vertical.svg"
+                                    alt="">
+                                <b class="text-xl mr-8">Cab/Bus Rental</b>
+                            </li>
+
+
+                            <!-- train ticket button -->
+                            <li
+                                class="flex items-center gap-x-4  transition duration-500 grayscale hover:filter-none hover:text-red-600 hover:bg-neutral-200 rounded-t-xl box-border border-b-4 border-transparent hover:border-red-600">
+                                <img class="h-14 w-14 ml-8"
+                                    src="https://st.redbus.in/web/images/layout/rail_vertical.svg" alt="">
+                                <b class="text-xl mr-8">Train Ticket</b>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                    <!-- feature -->
+
+                    <div class="feature flex flex-col mt-10">
+                        <p class="text-xl text-neutral-400">Rent Cabs, Tempo Travellers & Buses with best drivers</p>
+
+                        <ul class="flex flex-col mt-6 gap-y-4">
+                            <li class="flex gap-x-6 items-center">
+                                <img src="https://s3.rdbuz.com/web/images/homeV2/AboutUs/ryde_car.svg" alt="">
+                                <p class="tracking-wider">Outstation</p>
+                            </li>
+                            <li class="flex gap-x-6 items-center">
+                                <img src="https://s1.rdbuz.com/web/images/homeV2/AboutUs/ryde_car_hourly.svg" alt="">
+                                <p class="tracking-wider">Hourly Rental</p>
+                            </li>
+                            <li class="flex gap-x-6 items-center">
+                                <img src="https://s2.rdbuz.com/web/images/homeV2/AboutUs/ryde_airport_transport.svg"
+                                    alt="">
+                                <p class="tracking-wider">Airport Transfers</p>
+                            </li>
+
+                        </ul>
+
+                        <button
+                            class=" mt-10 w-1/2 p-2 border border-neutral-400 rounded-xl bg-red-500 text-white hover:bg-white hover:text-red-500 transition duration-500 cursor-pointer"><b
+                                class="text-lg p-1">Book Cab / Bus Rental →</b></button>
+                    </div>
+                </div>
+
+                <!-- image portion -->
+
+                <div class="partial-img mt-14">
+                    <img class=" mt-12" src="	https://s3.rdbuz.com/web/images/homeV2/AboutUs/rydePop.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Enjoy the app -->
+
+        <div class="enjoy w-full h-fit flex justify-center mt-28 w-fit ">
+            <div class="portion w-fit h-fit border  flex flex-wrap rounded-3xl">
+
+                <!-- heading -->
+                <h1 class=" ml-6 mt-6 w-full h-fit text-white text-4xl tracking-wider">ENJOY THE APP!</h1>
+
+                <!-- reach -->
+                <div class="reach mt-8 ml-6 h-fit w-1/3 bg-white rounded-xl flex flex-col gap-y-4 mb-12">
+                    <p class="flex gap gap-x-4 mt-8 ml-6 tracking-wider text-lg"> <img
+                            src="https://s3.rdbuz.com/web/images/homeV2/appinstall/tick.svg" alt=""> Quick Access</p>
+                    <p class="flex gap gap-x-4 ml-6 tracking-wider text-lg"> <img
+                            src="https://s3.rdbuz.com/web/images/homeV2/appinstall/tick.svg" alt=""> Superior Live
+                        Tracking</p>
+
+                    <!-- download -->
+                    <div class="download flex mt-6 ml-6 mb-8 place-content-around">
+                        <!-- playstore -->
+                        <div class="playstore flex flex-col">
+                            <p class="text-3xl text-neutral-600">4.6 ★</p>
+                            <p class="text-neutral-400">50M+ downloads</p>
+                            <p class="text-neutral-700 font-bold">Playstore</p>
+                        </div>
+                        <!-- appstore -->
+                        <div class="appstore flex flex-col">
+                            <p class="text-3xl text-neutral-600">4.5 ★</p>
+                            <p class="text-neutral-400">50M+ downloads</p>
+                            <p class="text-neutral-700 font-bold">App Store</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QR code -->
+                <div class="qr-code ml-24 mt-16 h-fit w-fit flex flex-col gap-y-2">
+                    <p class="text-white font-bold text-lg pb-2">Scan to download</p>
+                    <img src="https://s1.rdbuz.com/web/images/homeV2/qrCode.svg" alt="qr-code">
+                </div>
+
+                <!-- Download-place -->
+                <div class="stores h-fit w-fit mt-16 ml-16 flex flex-col gap-y-4">
+                    <p class="text-white font-bold text-lg pb-2">Download on the App</p>
+                    <button class="rounded-xl"><img
+                            src="https://s2.rdbuz.com/web/images/homeV2/appinstall/playStore.svg" alt=""></button>
+                    <button class="rounded-xl"><img src="https://s3.rdbuz.com/web/images/homeV2/appinstall/appStore.svg"
+                            alt=""></button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Primo -->
+        <div class="primo h-fit w-9/12 flex flex-col items-center mt-24">
+            <img src="https://s1.rdbuz.com/web/images/homeV2/primoSection/primoTopBanner.svg" alt="">
+
+            <!-- Cards -->
+
+            <div class="cards flex w-full place-content-around mt-6">
+
+                <!-- card-1 -->
+                <div
+                    class="offer-card3 flex items-center w-1/4 mt-8 h-fit text-white rounded-3xl bg-gradient-to-r from-blue-800 to-purple-500">
+
+                    <div class="image w-1/4 h-full ml-4">
+                        <img class="" src="	https://s2.rdbuz.com/web/images/homeV2/primoSection/primoSubImg1.svg"
+                            alt="">
+                    </div>
+                    <div class="text ml-6 mt-4 w-fit">
+                        <p class="text-xl font-bold">
+                            1 of 5 Buses <br> qualify
+                        <p class="mb-3 mt-3">Primo's strict safety qualification ensures a safer travel for you</p>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card-2 -->
+
+                <div
+                    class="offer-card3 flex items-center w-1/4 mt-8 h-fit text-white rounded-3xl bg-gradient-to-r from-blue-800 to-purple-500">
+
+                    <div class="image w-1/4 h-full ml-4">
+                        <img class="" src="	https://s3.rdbuz.com/web/images/homeV2/primoSection/primoSubImg2.svg"
+                            alt="">
+                    </div>
+                    <div class="text ml-6 mt-4 w-fit ">
+                        <p class="text-xl font-bold">
+                            Preferred by <br> 90%
+                        <p class="mb-3 mt-3">90% of travellers re-book Primo buses for its punctuality</p>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card-3 -->
+
+                <div
+                    class="offer-card3 flex items-center h-fit w-1/4 mt-8 h-fit text-white rounded-3xl bg-gradient-to-r from-blue-800 to-purple-500">
+
+                    <div class="image w-1/4 h-full ml-4">
+                        <img class="" src="	https://s2.rdbuz.com/web/images/homeV2/primoSection/primoSubImg3.svg"
+                            alt="">
+                    </div>
+                    <div class="text ml-6 mt-4 w-fit">
+                        <p class="text-xl font-bold ">
+                            9 Lac+ monthly traveller
+                        <p class="mb-3 mt-3">In 2022, 9 Lac+ people <br> traveled with Primo every month</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Parterned with -->
+
+    <div class="partener flex flex-col gap-y-10 mt-20 w-fit">
+        <h1 class="text-4xl tracking-wide text-neutral-600">PARTNERED WITH</h1>
+
+        <!-- view all button -->
+        <button class=" flex absolute right-48 mt-4 p-3 pl-8 pr-8 h-fit w-fit border bg-neutral-100 rounded-xl shadow-sm shadow-black hover:bg-blue-300 transition duration-500 tracking-wide">View All</button>
+
+        <h2 class="text-3xl tracking-wide text-neutral-600 ml-4">25 RTCs</h2>
+
+        <!-- campanies logo -->
+        <div class="campanies flex gap-x-8">
+            <div class="h-fit w-fit text-center"><img class=" h-28 w-28 rounded-full" src="https://st.redbus.in/buslogos/country/ind/logo_group/10283.png" alt=""> <p class="p-1 hover:bg-neutral-200 rounded-3xl transition duration-400 cursor-pointer">APSRTC</p></div>
+
+            <div class="h-fit w-fit text-center tracking-wide"><img class="h-28 w-28 rounded-full" src="https://s3.rdbuz.com/web/images/homeV2/rtc/GSRTC.svg" alt=""><p class="p-1 hover:bg-neutral-200 rounded-3xl transition duration-400 cursor-pointer">GSRTC</p></div>
+
+            <div class="h-fit w-fit text-center tracking-wide"><img class="h-28 w-28 rounded-full" src="https://st.redbus.in/Images/carousel/TSRTC.png" alt=""><p class="p-1 hover:bg-neutral-200 rounded-3xl transition duration-400 cursor-pointer">TSRTC</p></div>
+
+            <div class="h-fit w-fit text-center tracking-wide"><img class="h-28 w-28 rounded-full" src="https://st.redbus.in/buslogos/country/ind/logo_group/10823.png" alt=""><p class="p-1 hover:bg-neutral-200 rounded-3xl transition duration-400 cursor-pointer">MSRTC</p></div>
+
+            <div class="h-fit w-fit text-center tracking-wide"><img class="h-28 w-28 rounded-full" src="https://s3.rdbuz.com/web/images/homeV2/rtc/KERALA-RTC.svg" alt=""><p class="p-1 hover:bg-neutral-200 rounded-3xl transition duration-400 cursor-pointer">Kerala RTC</p></div>
+
+            <div class="h-fit w-fit text-center tracking-wide"><img class="h-28 w-28 rounded-full" src="https://st.redbus.in/buslogos/country/ind/logo_group/16426.png" alt=""><p class="p-1 hover:bg-neutral-200 rounded-3xl transition duration-400 cursor-pointer">SBSTC</p></div>
+
+            <div class="h-fit w-fit text-center tracking-wide"><img class="h-28 w-28 rounded-full" src="https://s3.rdbuz.com/web/images/homeV2/rtc/RSRTC.svg" alt=""><p class="p-1 hover:bg-neutral-200 rounded-3xl transition duration-400 cursor-pointer">RSRTC</p></div>
+
+            <div class="h-fit w-fit text-center tracking-wide"><img class="h-28 w-28 rounded-full" src="https://s3.rdbuz.com/web/images/homeV2/rtc/UPSRTC.svg" alt=""><p class="p-1 hover:bg-neutral-200 rounded-3xl transition duration-400 cursor-pointer">UPSRTC</p></div>
+        </div>
+
+        <!-- private campanies -->
+
+         <div class="private-sector flex flex-col h-fit w-fit mt-10">
+            <h1 class="text-4xl tracking-wide text-neutral-600">3500+ Private Bus Operators</h1>
+
+            <!-- private-camp row -->
+            <div class="campanies-name flex mt-8 ml-4 gap-x-8 text-center">
+                <div class="fr flex flex-col">
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">SRS Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Rajdhani Express</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Patel Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Sri Krishna Travels</p> 
+                </div>
+                <div class="fr flex flex-col">
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Evacy Bus</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">JBL Travel</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">VRL Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Humsafar Travels</p> 
+                </div>
+                <div class="fr flex flex-col">
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">SRS Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Rajdhani Express</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Patel Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Sri Krishna Travels</p> 
+                </div>
+                <div class="fr flex flex-col">
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">SRS Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Rajdhani Express</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Patel Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Sri Krishna Travels</p> 
+                </div>
+                <div class="fr flex flex-col">
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">SRS Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Rajdhani Express</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Patel Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Sri Krishna Travels</p> 
+                </div>
+                <div class="fr flex flex-col">
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">SRS Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Rajdhani Express</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Patel Travels</p>
+                    <p class="hover:bg-neutral-200 rounded-3xl p-3 tracking-wider transition duration-400 hover:cursor-pointer">Sri Krishna Travels</p> 
+                </div>
+            </div>
+         </div>
+    </div>
+
+
+         <!-- query department -->
+
+        <div class="query flex flex-col h-fit w-9/12 mt-16">
+            <h1 class="text-5xl flex ">FREQUENTY ASKED QUESTIONS</h1>
+
+            <!-- request -->
+            <div class="request flex mt-8 gap-x-8 tracking-wider">
+                
+                <p class="pb-2 p-2 text-neutral-600 underline underline-offset-2 hover:bg-neutral-100 hover:text-red-500 rounded text-xl transition duration-500">General</p>
+                <p class="pb-2 p-2 text-neutral-600 underline underline-offset-2 hover:bg-neutral-100 hover:text-red-500 rounded text-xl transition duration-500">Ticket related</p>
+                <p class="pb-2 p-2 text-neutral-600 underline underline-offset-2 hover:bg-neutral-100 hover:text-red-500 rounded text-xl transition duration-500">Payment</p>
+                <p class="pb-2 p-2 text-neutral-600 underline underline-offset-2 hover:bg-neutral-100 hover:text-red-500 rounded text-xl transition duration-500">Cancellation & Refund</p>
+                <p class="pb-2 p-2 text-neutral-600 underline underline-offset-2 hover:bg-neutral-100 hover:text-red-500 rounded text-xl transition duration-500">Insurance</p>
+            </div>
+
+                <!-- Question -->
+                <div class="question flex flex-col h-fit mt-10 w-full gap-y-6 ">
+
+                    <!-- question 1 -->
+                    <div class="q1 h-14 w-full border flex items-center rounded-lg hover:bg-neutral-200 transition duration-400 p-8 ">
+                        <b class="p-3">Can I track the location of my booked bus online?</b>
+                    </div>
+                    <!-- question 2 -->
+                    <div class="q2 h-14 w-full border flex items-center rounded-lg hover:bg-neutral-200 transition duration-400 p-8">
+                        <b class="p-3">How can I get the discounts on the bus booking?</b>
+                    </div>
+                    <!-- question 3 -->
+                    <div class="q3 h-14 w-full border flex items-center rounded-lg hover:bg-neutral-200 transition duration-400 p-8">
+                        <b class="p-3">Why book bus tickets online on redBus?</b>
+                    </div>
+                    <!-- question 4 -->
+                    <div class="q4 h-14 w-full border flex items-center rounded-lg hover:bg-neutral-200 transition duration-400 p-8">
+                        <b class="p-3">Do I need to create an account on the redBus site to book my bus ticket?</b>
+                    </div>
+                    <!-- question 5 -->
+                    <div class="q5 h-14 w-full border flex items-center rounded-lg hover:bg-neutral-200 transition duration-400 p-8">
+                        <b class="p-3">How can I get the discounts on the bus booking?</b>
+                    </div>
+                </div>
+        </div>
+
+
+        <!-- Global presence -->
+
+        <div class="global w-9/12 mt-20">
+            <h1 class="text-5xl">GLOBAL PRESENCE</h1>
+
+            <!-- country -->
+            <div class="country flex text-center place-content-around mt-8">
+
+                <!-- colombia -->
+               <div class="colombia flex flex-col">
+                <img src="https://s3.rdbuz.com/web/images/homeV2/LATAM/GlobalPresence/Colombia.svg" alt="">
+                <b class="text-xl">Colombia</b>
+               </div>
+
+               <!-- India -->
+               <div class="india flex flex-col">
+                <img src="https://s3.rdbuz.com/web/images/homeV2/LATAM/GlobalPresence/India.svg" alt="">
+                <b class="text-xl">India</b>
+               </div>
+
+               <!-- indonesia -->
+               <div class="indonesia flex flex-col">
+                <img src="https://s3.rdbuz.com/web/images/homeV2/LATAM/GlobalPresence/Indonesia.svg" alt="">
+                <b class="text-xl">Indonesia</b>
+               </div>
+
+               <!-- malaysia -->
+               <div class="malaysia flex flex-col">
+                <img src="https://s3.rdbuz.com/web/images/homeV2/LATAM/GlobalPresence/Malaysia.svg" alt="">
+                <b class="text-xl">Malaysia</b>
+               </div>
+
+               <!-- peru -->
+               <div class="peru flex flex-col">
+                <img src="https://s3.rdbuz.com/web/images/homeV2/LATAM/GlobalPresence/Peru.svg" alt="">
+                <b class="text-xl">Peru</b>
+               </div>
+
+               <!-- Singapore -->
+               <div class="Singapore  flex flex-col">
+                <img src="https://s3.rdbuz.com/web/images/homeV2/LATAM/GlobalPresence/Singapore.svg" alt="">
+                <b class="text-xl">Singapor</b>
+               </div>
+
+            </div>
+        </div>
+
+        <!-- About Portion -->
+
+        <div class="about flex flex-col items-center h-fit  w-full mt-32 bg-neutral-100 tracking-wide divide-y divide-solid">
+            <div class="top-list flex h-fit w-10/12 mt-16 place-content-around ">
+
+                <!-- Top RTCs -->
+                <div class="top-RTC flex flex-col gap-y-2">
+                    <h1 class="text-lg font-bold">Top RTCs</h1>
+                    <p class="text-neutral-500">APSRTC</p>
+                    <p class="text-neutral-500">GSRTC</p>
+                    <p class="text-neutral-500">MSRTC</p>
+                    <p class="text-neutral-500">TNRTC</p>
+                    <p class="text-neutral-500">View All</p>
+                </div>
+
+                <!-- other -->
+                <div class="other flex flex-col gap-y-2">
+                    <h1 class="text-lg font-bold">Other</h1>
+                    <p class="text-neutral-500">TSRTC</p>
+                    <p class="text-neutral-500">SBRTC</p>
+                    <p class="text-neutral-500">SNRTC</p>
+                    <p class="text-neutral-500">Kerala RTC</p>
+                    <p class="text-neutral-500">View All</p>
+                </div>
+
+                <!-- Top bus routes -->
+                <div class="other flex flex-col gap-y-2">
+                    <h1 class="text-lg font-bold">Top bus routes</h1>
+                    <p class="text-neutral-500">Hyderabad to Bangalore Bus</p>
+                    <p class="text-neutral-500">Hyderabad to Bangalore Bus</p>
+                    <p class="text-neutral-500">Pune to Bangalore Bus</p>
+                    <p class="text-neutral-500">Mumbai to Bangalore Bus</p>
+                    <p class="text-neutral-500">View All</p>
+                </div>
+
+                <!-- Top cities -->
+                <div class="other flex flex-col gap-y-2">
+                    <h1 class="text-lg font-bold">Top cities</h1>
+                    <p class="text-neutral-500">Hyderabad Bus Tickets</p>
+                    <p class="text-neutral-500">Bangalore Bus Tickets</p>
+                    <p class="text-neutral-500">Chennai Bus Tickets</p>
+                    <p class="text-neutral-500">Pune Bus Tickets</p>
+                    <p class="text-neutral-500">View All</p>
+                </div>
+
+                <!-- redRail -->
+                <div class="other flex flex-col gap-y-2">
+                    <h1 class="text-lg font-bold">redRail</h1>
+                    <p class="text-neutral-500">Book Train Tickets</p>
+                    <p class="text-neutral-500">PNR Status</p>
+                    <p class="text-neutral-500">Live Train Status</p>
+                    <p class="text-neutral-500">Train Seat Availability</p>
+                    <p class="text-neutral-500">View All</p>
+                </div>
+            </div>
+
+
+            <!-- About-info -->
+
+            <div class="about flex h-fit w-10/12 place-content-around tracking-wide mt-8">
+
+                <!-- redbus -->
+                <div class="redbus flex flex-col h-fit w-1/4 mt-8 ">
+                    <img class="w-20 h-20" src="https://st.redbus.in/Images/rdc/rdc-redbus-logo.svg" alt="">
+                    <p class="text-neutral-500">redBus is the world's largest online bus ticket booking service trusted by over 25 million happy customers globally. redBus offers bus ticket booking through its website, iOS and Android mobile apps for all major routes.</p>
+                </div>
+
+                <!-- about red-bus -->
+                <div class="about-redbus flex flex-col h-fit w-fit gap-y-2 mt-8">
+                    <h1 class="text-lg font-bold">About redBus</h1>
+                    <p class="text-neutral-500">Investor Realtion</p>
+                    <p class="text-neutral-500">Contact Us</p>
+                    <p class="text-neutral-500">Mobile Version</p>
+                    <p class="text-neutral-500">RedBus on Mobile</p>
+                    <p class="text-neutral-500">SiteMap</p>
+                    <p class="text-neutral-500">Offer</p>
+                    <p class="text-neutral-500">Carrier</p>
+                    <p class="text-neutral-500">Value</p>
+                </div>
+
+                <!-- info -->
+                <div class="info flex flex-col h-fit w-fit gap-y-2 mt-8">
+                    <h1 class="text-lg font-bold">T&C</h1>
+                    <p class="text-neutral-500">Blog</p>
+                    <p class="text-neutral-500">Privacy Policy</p>
+                    <p class="text-neutral-500">FAQ</p>
+                    <p class="text-neutral-500">Bus operator Registration</p>
+                    <p class="text-neutral-500">Operator Registration</p>
+                    <p class="text-neutral-500">Insurance</p>
+                    <p class="text-neutral-500">User agreement</p>
+                </div>
+
+                <!-- Global cities -->
+                <div class="global-cities flex flex-col h-fit w-fit gap-y-2 mt-8">
+                    <h1 class="text-lg font-bold">Global Cities</h1>
+                    <p class="text-neutral-500">India</p>
+                    <p class="text-neutral-500">Malaysia</p>
+                    <p class="text-neutral-500">Peru</p>
+                    <p class="text-neutral-500">Indonesia</p>
+                    <p class="text-neutral-500">Colombia</p>
+                    <p class="text-neutral-500">Singapore</p>
+                </div>
+            </div>
+
+            <!-- handles -->
+
+            <div class="media flex mt-8 h-fit w-10/12 tracking-wide place-content-between">
+
+                <p class="text-neutral-400 mt-8 mb-8">Ⓒ 2023 Redbus India Pvt Ltd. All rights reserved</p>
+                
+                
+                <div class="account flex mt-8 mb-8 gap-x-8 ">
+
+                    <!-- facebook -->
+                    <a href="https://www.facebook.com/redBus.in/" target="_blank">
+                        <img src="	https://st.redbus.in/web/images/layout/social_facebook_new.svg" alt="">
+                    </a>
+
+                    <!-- linkedin -->
+                    <a href="https://www.linkedin.com/company/redbus_2/?originalSubdomain=in" target="_blank">
+                        <img src="https://st.redbus.in/web/images/layout/social_linkedin_new.svg" alt="">
+                    </a>
+
+                    <!-- twitter -->
+                    <a href="https://st.redbus.in/web/images/layout/social_twitter_new.svg" target="_blank">
+                        <img src="	https://st.redbus.in/web/images/layout/social_twitter_new.svg" alt="">
+                    </a>
+
+                    <!-- instagram -->
+                    <a href="https://www.instagram.com/accounts/login/?next=%2Fredbusindia%2F" target="_blank">
+                        <img src="https://st.redbus.in/web/images/layout/social_instagram_new.svg" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+</body>
+
+</html>
